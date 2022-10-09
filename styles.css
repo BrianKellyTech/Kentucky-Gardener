@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* main container for homepage */
+
+.header-container {
+    background: #14341c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.header-content {
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    margin: 0;
+}
+
+.header-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+    line-height: 2;
+    margin: 0;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    padding: 5px 5px 5px 50px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.hero-container {
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/main-background.jpg);
+    background-size: cover;
+    height: 75vh;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 24px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    color: white;
+    line-height: 1;
+    margin: 0 0 24px 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px black;
+}
+
+.hero-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    line-height: 1.5;
+    text-shadow: 2px 2px 2px black;
+}
+
+.card-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 70%)), url(images/card-background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.card-content {
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center; 
+    padding: 15px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin: 20px 20px 50px 20px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/grow.jpg);
+}
+
+.card2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/eat.jpg);
+}
+
+.card3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/combat.jpg);
+}
+
+.card4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/resources.jpg);
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card p {
+    text-shadow: 1px 1px black;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.card h2 {
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.footer-container {
+    background: #14341c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-content {
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
