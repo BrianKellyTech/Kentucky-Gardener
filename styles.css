@@ -32,7 +32,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px
+    gap: 60px;
+}
+
+.nav-menu a:hover {
+    color: rgb(113, 236, 56);
+    transition: .5s;
 }
 
 .slogan {
@@ -71,26 +76,32 @@ a {
 
 .hero-container-grow {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/grow.jpg);
+    background-position: center;
 }
 
 .hero-container-eat {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/eat.jpg);
+    background-position: center;
 }
 
 .hero-container-fight {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/fight.jpg);
+    background-position: center;
 }
 
 .hero-container-know {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/know.jpg);
+    background-position: center;
 }
 
 .hero-container-about {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/about.jpg);
+    background-position: center;
 }
 
 .hero-container-contact {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/contact.jpg);
+    background-position: center;
 }
 
 .hero-content {
@@ -239,12 +250,12 @@ a {
         display: block;
     }
 
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
     }
 
     .hamburger.active .bar:nth-child(3) {
@@ -260,7 +271,7 @@ a {
         background-color: #14341c;
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: .5s;
     }
 
     .nav-item {
@@ -269,6 +280,7 @@ a {
 
     .nav-menu.active {
         left: 0;
+        background-color: rgb(3, 63, 20);
     }
 
     .slogan {
