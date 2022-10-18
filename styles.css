@@ -45,6 +45,8 @@ a {
     color: white;
 }
 
+/* hamburger menu (hidden unless viewed on a smartphone screen) */
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -60,7 +62,7 @@ a {
     background-color: white;
 }
 
-/* main container for each page */
+/* main hero container for each page */
 
 .hero-container {
     display: flex;
@@ -72,7 +74,7 @@ a {
     justify-content: center;
 }
 
-/* change the background images based on the landing page */
+/* change the hero container background images based on the landing page */
 
 .hero-container-grow {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/grow.jpg);
@@ -103,6 +105,8 @@ a {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/contact.jpg);
     background-position: center;
 }
+
+/* main hero content */
 
 .hero-content {
     width: 100%;
@@ -218,7 +222,7 @@ a {
 }
 
 
-/* TO DO figure out where to put these in proper order */
+/* TO DO make accordion boxes, figure out where to put these in proper order */
 
 .item-container {
     background: #14341c;
@@ -243,7 +247,8 @@ a {
 
 }
 
-/* MEDIA QUERY SMARTPHONES */
+/* media query for smartphones. hides the hamburger menu on large screens
+and makes it appear on smaller ones. creates an "x" animation */
 
 @media(max-width:768px) {
     .hamburger {
