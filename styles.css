@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -6,40 +7,52 @@
 
 /* header and navigation */
 
-.header-container {
-    background: #14341c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 0;
+header {
+    background-color: #14341c;
 }
 
-.header-content {
+li {
+    list-style: none;
+}
+
+a {
     color: white;
-    width: 100%;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-right: 50px;
-    margin: 0;
+    padding: 0 24px;
 }
 
-.logo {
-    width: 50px;
-    padding: 5px 5px 5px 50px;
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px
 }
 
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    padding-left: 100px;
-}
-
-nav ul li a {
-    text-decoration: none;
+.slogan {
+    font-size: 2rem;
     color: white;
-    font-size: 25px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
 }
 
 /* main container for each page */
@@ -75,9 +88,9 @@ nav ul li a {
 .hero-container-about {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/about.jpg);
 }
- 
+
 .hero-container-contact {
-        background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/contact.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/contact.jpg);
 }
 
 .hero-content {
@@ -145,7 +158,7 @@ nav ul li a {
     background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/eat.jpg);
 }
 
-.card-pests {
+.card-fight {
     background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/fight.jpg);
 }
 
@@ -216,5 +229,57 @@ nav ul li a {
     color: white;
     padding: 10px;
     text-align: center;
-    
+
+}
+
+/* MEDIA QUERY SMARTPHONES */
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #14341c;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
 }
