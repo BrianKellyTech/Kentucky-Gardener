@@ -1,3 +1,5 @@
+// show and hide the hamburger menu
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -11,3 +13,9 @@ document.querySelectorAll("nav-link").forEach(n => n.addEventListener("click", (
     navMenu.classList.remove("active");
 
 }))
+
+// show alert when the contact form button is clicked
+
+function showMessage() {
+    alert(`This is not a functional SMPT request. It is for educational purposes only.`);
+}

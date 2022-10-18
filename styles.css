@@ -41,7 +41,7 @@ a {
 }
 
 .slogan {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: white;
 }
 
@@ -68,7 +68,7 @@ a {
     display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/main-background.jpg);
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     margin: 0;
     align-items: center;
     justify-content: center;
@@ -93,11 +93,6 @@ a {
 
 .hero-container-know {
     background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/know.jpg);
-    background-position: center;
-}
-
-.hero-container-about {
-    background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url(images/about.jpg);
     background-position: center;
 }
 
@@ -247,8 +242,59 @@ a {
 
 }
 
+
+/* contact form container styling*/
+
+form {
+    background-color: #14341c;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* contact form header */
+
+form h3 {
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* contact form input field styling */
+
+form input,
+form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #e6e2e2;
+    font-size: 16px;
+}
+
+/* contact form button styling */
+
+.button {
+    padding: 15px;
+    background: #0e8e41;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+
 /* media query for smartphones. hides the hamburger menu on large screens
-and makes it appear on smaller ones. creates an "x" animation */
+and makes it appear on smaller ones. creates an "x" animation. makes the 
+main hero h1 and hero paragraphs smaller. also drops font size on the 
+h3 for the contact form*/
 
 @media(max-width:768px) {
     .hamburger {
@@ -297,6 +343,10 @@ and makes it appear on smaller ones. creates an "x" animation */
     }
 
     .hero-content p {
+        font-size: 16px;
+    }
+
+    form h3 {
         font-size: 16px;
     }
 }
