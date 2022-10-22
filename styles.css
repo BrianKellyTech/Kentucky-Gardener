@@ -1,3 +1,5 @@
+/* styling for entire document, including google fonts */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,6 +20,7 @@ li {
 a {
     color: white;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .navbar {
@@ -216,32 +219,77 @@ a {
     text-align: center;
 }
 
+/* accordion content boxes for grow, eat, fight, and know sub-pages */
 
-/* TO DO make accordion boxes, figure out where to put these in proper order */
-
-.item-container {
-    background: #14341c;
+.accordion-container {
+    background-color: #14341c;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 50px;
-    max-height: 150px;
-    max-width: 1000px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.item-image img {
-    display: block;
-    max-height: 130px;
-    padding: 10px;
-}
-
-.item-container p {
-    color: white;
-    padding: 10px;
+.accordion-section-header {
     text-align: center;
-
+    padding: 3rem 0;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
 
+.accordion-box {
+    width: 60%;
+    max-width: 1000px;
+    margin: 0 0 0.5rem 0;
+} 
+
+.accordion-item {
+    background-color: rgb(8, 96, 34);
+    color: white;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 25%);
+}
+
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item-header::after {
+    content: "\25BE";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-item-header.active::after {
+    transform: rotate(-180deg);
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, transparent, #14341c, transparent) 1;
+}
 
 /* contact form container styling*/
 
@@ -294,7 +342,7 @@ form textarea {
 /* media query for smartphones. hides the hamburger menu on large screens
 and makes it appear on smaller ones. creates an "x" animation. makes the 
 main hero h1 and hero paragraphs smaller. also drops font size on the 
-h3 for the contact form*/
+h3 for the contact form and the h1 for the accordion headers*/
 
 @media(max-width:768px) {
     .hamburger {
@@ -348,5 +396,9 @@ h3 for the contact form*/
 
     form h3 {
         font-size: 16px;
+    }
+
+    .accordion-item-header {
+        font-size: 1rem;
     }
 }
