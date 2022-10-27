@@ -20,7 +20,7 @@ function showMessage() {
     alert(`This is not a functional SMPT request. It is for educational purposes only.`);
 }
 
-// accordion box event listeners
+// accordion box click event listeners
 
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
@@ -28,6 +28,7 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     accordionItemHeader.addEventListener("click", () => {
         accordionItemHeader.classList.toggle("active");
         const accordionItemBody = accordionItemHeader.nextElementSibling;
+        accordionItemBody.classList.toggle("active");
         if(accordionItemHeader.classList.contains("active")) {
             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px"
         }
