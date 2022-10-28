@@ -222,13 +222,12 @@ a {
 /* accordion content boxes for grow, eat, fight, and know sub-pages */
 
 .accordion-container {
-    /* background-color: #14341c; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/accordion-background.jpg);
-    background-size: cover;
+    background-color: #14341c;
+    background-image: linear-gradient(#14341c, black);
 }
 
 .accordion-section-header {
@@ -247,7 +246,6 @@ a {
 
 .accordion-item {
     background-color: rgb(4, 110, 39);
-    /* min-height: 150px; */
     color: white;
     margin: 1rem 0;
     border-radius: 0.5rem;
@@ -283,7 +281,7 @@ a {
 }
 
 .accordion-image {
-    height: 135px;
+    height: 134px;
     width: 150px;
     float: left;
     object-fit: cover;
@@ -299,16 +297,19 @@ a {
     transition: max-height 0.3s ease-out;
 }
 
-.accordion-item-body.active {
-    padding-bottom: 15px;
-}
-
 .accordion-item-body-content {
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 2px solid;
     border-image: linear-gradient(to right, transparent, #14341c, transparent) 1;
     text-shadow: 1px 1px 1px black;
+}
+
+.accordion-item-body-content a {
+        font-size: 16px;
+        text-align: center;
+        display: block;
+        padding: 0 0 10px 0;
 }
 
 .accordion-box:nth-last-of-type(1) {
@@ -425,6 +426,6 @@ h3 for the contact form and the h1 for the accordion headers*/
     .accordion-item-header {
         font-size: 1rem;
     }
-
-    .accordion-image {}
+    .accordion-item-body-content a {
+        text-align: left;
 }
