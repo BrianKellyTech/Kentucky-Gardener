@@ -8,10 +8,15 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 })
 
-document.querySelectorAll("nav-link").forEach(n => n.addEventListener("click", () => {
+window.addEventListener("scroll", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-}))
+})
+
+// document.querySelectorAll("nav-link").forEach(n => n.addEventListener("click", () => {
+//     hamburger.classList.remove("active");
+//     navMenu.classList.remove("active");
+// }))
 
 // show an alert when the contact form button is clicked
 
@@ -25,15 +30,9 @@ const accordionItemHeaders = document.querySelectorAll(".accordion-item-header")
 
 accordionItemHeaders.forEach(accordionItemHeader => {
     accordionItemHeader.addEventListener("click", () => {
-        // const currentlyActiveAccordion = document.querySelector(".accordion-item-header.active");
-        // if(currentlyActiveAccordion && currentlyActiveAccordion!==accordionItemHeader){
-        //     currentlyActiveAccordion.classList.toggle("active");
-        //     currentlyActiveAccordion.nextElementSibling.style.maxHeight = 0;
-        // }
-
         accordionItemHeader.classList.toggle("active");
         const accordionItemBody = accordionItemHeader.nextElementSibling;
-        if(accordionItemHeader.classList.contains("active")) {
+        if (accordionItemHeader.classList.contains("active")) {
             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px"
         }
         else {
