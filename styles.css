@@ -32,10 +32,24 @@ a {
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #14341c;
+    width: 100%;
+    text-align: center;
+    transition: .5s;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+    background-color: rgb(3, 63, 20);
 }
 
 .nav-menu a:hover {
@@ -44,14 +58,14 @@ a {
 }
 
 .slogan {
-    font-size: 1.7rem;
+    font-size: 20px;
     color: white;
 }
 
 /* hamburger menu (hidden unless viewed on a smartphone screen) */
 
 .hamburger {
-    display: none;
+    display: block;
     cursor: pointer;
     background: none;
     border: none;
@@ -65,6 +79,18 @@ a {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* main hero container for each page */
@@ -118,17 +144,17 @@ a {
 
 .hero-content h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 55px;
+    font-size: 50px;
     color: white;
     line-height: 1;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px black;
 }
 
 .hero-content p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     color: white;
     line-height: 1.5;
     text-shadow: 2px 2px 2px black;
@@ -234,23 +260,23 @@ a {
 
 .accordion-section-header {
     text-align: center;
-    padding: 3rem 0;
-    font-size: 2.5rem;
+    padding: 48px 0;
+    font-size: 30px;
     color: white;
     text-shadow: 2px 2px 2px black;
 }
 
 .accordion-box {
-    width: 60%;
+    width: 80%;
     max-width: 1000px;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 8px 0;
 }
 
 .accordion-item {
     background-color: rgb(4, 110, 39);
     color: white;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
+    margin: 16px 0;
+    border-radius: 8px;
     border-color: white;
     border-style: solid;
     border-width: 1px;
@@ -258,11 +284,11 @@ a {
 }
 
 .accordion-item-header {
-    padding: 0.5rem 3rem 0.5rem 1rem;
-    min-height: 3.5rem;
-    line-height: 1.25rem;
+    padding: 8px 48px 8px 16px;
+    min-height: 56px;
+    line-height: 20px;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 20px;
     display: flex;
     align-items: center;
     position: relative;
@@ -272,9 +298,9 @@ a {
 
 .accordion-item-header::after {
     content: "\25BE";
-    font-size: 2rem;
+    font-size: 32px;
     position: absolute;
-    right: 1rem;
+    right: 16px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -285,9 +311,8 @@ a {
 .accordion-image {
     height: 134px;
     width: 150px;
-    float: left;
     object-fit: cover;
-    margin: 15px 20px 5px 0;
+    margin: 0;
     border-color: #14341c;
     border-style: solid;
     border-width: 2px;
@@ -300,18 +325,26 @@ a {
 }
 
 .accordion-item-body-content {
-    padding: 1rem;
-    line-height: 1.5rem;
+    padding: 16px;
+    line-height: 24px;
     border-top: 2px solid;
     border-image: linear-gradient(to right, transparent, #14341c, transparent) 1;
     text-shadow: 1px 1px 1px black;
 }
 
+.accordion-item-body-content h4 {
+    font-size: 16px;
+}
+
+.accordion-item-body-content p {
+    font-size: 14px;
+}
+
 .accordion-item-body-content a {
-        font-size: 16px;
-        text-align: center;
-        display: block;
-        padding: 0 0 10px 0;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    padding: 0 0 10px 0;
 }
 
 .accordion-box:nth-last-of-type(1) {
@@ -335,6 +368,7 @@ form {
 form h3 {
     color: white;
     font-weight: 800;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -366,69 +400,117 @@ form textarea {
     border-radius: 30px;
 }
 
-/* media query for smartphones. hides the hamburger menu on large screens
-and makes it appear on smaller ones. creates an "x" animation. makes the 
-main hero h1 and hero paragraphs smaller. also drops font size on the 
-h3 for the contact form and the h1 for the accordion headers*/
+/* tablet media query */
 
-@media(max-width:768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #14341c;
-        width: 100%;
-        text-align: center;
-        transition: .5s;
-    }
-
-    .nav-item {
-        margin: 16px 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-        background-color: rgb(3, 63, 20);
-    }
+@media screen and (min-width:768px) {
 
     .slogan {
-        font-size: 1rem;
+        font-size: 25px;
     }
 
     .hero-content h1 {
-        font-size: 40px;
+        font-size: 65px;
+        margin: 0 0 70px 0;
     }
 
     .hero-content p {
-        font-size: 16px;
+        font-size: 17px;
     }
 
-    form h3 {
-        font-size: 16px;
+    .accordion-section-header {
+        font-size: 40px;
     }
 
     .accordion-item-header {
-        font-size: 1rem;
+        font-size: 26px;
     }
+
+    .accordion-item-body-content p {
+        font-size: 16px;
+    }
+
     .accordion-item-body-content a {
-        text-align: left;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .accordion-item-body-content h4 {
+        font-size: 20px;
+    }
+
+    .accordion-image {
+        float: left;
+        margin: 15px 20px 5px 0;
+    }
+
+    form h3 {
+        font-size: 24px;
+    }
 }
+
+/* desktop media query */
+
+@media screen and (min-width:1024px) {
+
+    .hamburger {
+        display: none
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        flex-direction: row;
+        left: unset;
+        top: unset;
+        width: unset;
+        position: unset;
+    }
+
+    .slogan {
+        font-size: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 80px;
+        margin: 0 0 80px 0;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .accordion-box{
+        max-width: 60%;
+    }
+
+    .accordion-section-header {
+        font-size: 50px;
+    }
+
+    .accordion-item-header {
+        font-size: 32px;
+    }
+
+    .accordion-item-body-content p {
+        font-size: 18px;
+    }
+
+    .accordion-item-body-content a {
+        font-size: 18px;
+    }
+
+    .accordion-item-body-content h4 {
+        font-size: 24px;
+    }
+
+    .accordion-image {
+        float: left;
+        margin: 15px 20px 5px 0;
+    }
+
+    form h3 {
+        font-size: 30px;
+    }
 }
