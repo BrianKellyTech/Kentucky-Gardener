@@ -22,6 +22,8 @@ For this project, I have elected to include the following 4 features:
 4.) "Create accordion boxes to display different types of information." My four main sub-pages all have accordion boxes containing
     various types of information. Some of them also include images inside the accordion that chasnge position based on viewport size.
 
-##There are no speical requirements to run this webpage.
+##I have also included the Google font stack "Montserrat" and applied it to the entire website.
+
+##The website is best viewed using Live Server within VS Code. Otherwise, there are no speical requirements to run this webpage.
 
 ##Brian Kelly, Code Louisville, 2022.

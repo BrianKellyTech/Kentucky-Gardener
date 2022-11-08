@@ -1,4 +1,4 @@
-/* styling for entire document, including google fonts */
+/* styling for entire document, including google font stack */
 
 * {
     box-sizing: border-box;
@@ -7,7 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* header and navigation */
+/* header, slogan and navigation styling */
 
 header {
     background-color: #14341c;
@@ -62,7 +62,7 @@ a {
     color: white;
 }
 
-/* hamburger menu (hidden unless viewed on a smartphone screen) */
+/* hamburger menu styling (hidden unless viewed on a smartphone or tablet screen) */
 
 .hamburger {
     display: block;
@@ -81,6 +81,8 @@ a {
     background-color: white;
 }
 
+/* hamburger "X" transformation */
+
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -93,7 +95,7 @@ a {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* main hero container for each page */
+/* main hero container styling for each page */
 
 .hero-container {
     display: flex;
@@ -132,7 +134,7 @@ a {
     background-position: center;
 }
 
-/* main hero content */
+/* main hero content styling */
 
 .hero-content {
     width: 100%;
@@ -160,7 +162,7 @@ a {
     text-shadow: 2px 2px 2px black;
 }
 
-/* clickable card section */
+/* homepage clickable card/link section */
 
 .card-container {
     background-color: #14341c;
@@ -207,7 +209,7 @@ a {
     background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url(images/know.jpg);
 }
 
-/* assign varous traits to the cards */
+/* assign varous styling to the cards */
 
 .card:hover {
     transform: translateY(-7px);
@@ -231,23 +233,7 @@ a {
     color: white;
 }
 
-/* main footer for each page */
-
-.footer-container {
-    background: #14341c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.footer-content {
-    font-size: 13px;
-    color: white;
-    text-align: center;
-}
-
-/* accordion content boxes for grow, eat, fight, and know sub-pages */
+/* accordion content box styling for grow, eat, fight, and know sub-pages */
 
 .accordion-container {
     display: flex;
@@ -296,6 +282,8 @@ a {
     text-shadow: 1px 1px 1px black;
 }
 
+/* accordion box traingle graphic animation */
+
 .accordion-item-header::after {
     content: "\25BE";
     font-size: 32px;
@@ -308,6 +296,8 @@ a {
     transform: rotate(-180deg);
 }
 
+/* image styling inside the accordion boxes */
+
 .accordion-image {
     height: 134px;
     width: 150px;
@@ -317,6 +307,8 @@ a {
     border-style: solid;
     border-width: 2px;
 }
+
+/* accordion box text and links styling */
 
 .accordion-item-body {
     max-height: 0;
@@ -363,7 +355,7 @@ form {
     border-radius: 10px;
 }
 
-/* contact form header */
+/* contact form header styling */
 
 form h3 {
     color: white;
@@ -398,6 +390,22 @@ form textarea {
     width: 150px;
     margin: 20px auto 0;
     border-radius: 30px;
+}
+
+/* main footer styling */
+
+.footer-container {
+    background: #14341c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-content {
+    font-size: 13px;
+    color: white;
+    text-align: center;
 }
 
 /* tablet media query */
