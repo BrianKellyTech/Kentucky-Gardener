@@ -24,6 +24,6 @@ For this project, I have elected to include the following 4 features:
 
 ##I have also included the Google font stack "Montserrat" and applied it to the entire website.
 
-##The website is best viewed using Live Server within VS Code. Otherwise, there are no speical requirements to run this webpage.
+##There are no speical requirements to run this webpage.
 
 ##Brian Kelly, Code Louisville, 2022.
