@@ -3,8 +3,11 @@
 ##The Kentucky Gardener is a website that aims to present information about gardening in the state of Kentucky in several ways:
 
 1.) GROW: Discussing the types of plants and vegetables that can be grown in the area
+
 2.) KNOW: Offering insights and products that will make gardening easier and make your plants more productive
+
 3.) FIGHT: Discussing the most common insects and diseases that can afflict your plants and how they can be managed
+
 4.) EAT: Sharing recipes for meals that can be made from garden grown vegetables and fruits
 
 For this project, I have elected to include the following 4 features:
