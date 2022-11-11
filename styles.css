@@ -299,10 +299,11 @@ a {
 /* image styling inside the accordion boxes */
 
 .accordion-image {
+    display: block;
     height: 134px;
     width: 150px;
     object-fit: cover;
-    margin: 0;
+    margin: auto;
     border-color: #14341c;
     border-style: solid;
     border-width: 2px;
