@@ -1,4 +1,6 @@
-# The Kentucky Gardener (Code Louisville Web/Dev1 Project)
+# The Kentucky Gardener
+
+## Code Louisville Web/Dev1 Project
 
 The Kentucky Gardener is a website that aims to present information about gardening in the state of Kentucky in several ways:
 
@@ -28,7 +30,7 @@ For this project, I have elected to include the following 4 features from the We
     is hovered over them in preparation for a click.
     
 4.) "Create accordion boxes to display different types of information." My four main sub-pages all have accordion boxes containing
-    various types of information. Some of them also include images inside the accordion that chasnge position based on viewport size.
+    various types of information. Some of them also include images inside the accordion that change position based on viewport size.
 
 I have also included the Google font stack "Montserrat" and applied it to the entire website.
 
