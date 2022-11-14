@@ -337,6 +337,10 @@ a {
     font-size: 14px;
 }
 
+.accordion-item-body-content ol li {
+    font-size: 14px;
+}
+
 .accordion-item-body-content a {
     font-size: 14px;
     text-align: left;
@@ -446,6 +450,10 @@ form textarea {
         font-size: 16px;
     }
 
+    .accordion-item-body-content ol li {
+        font-size: 16px;
+    }
+
     .accordion-item-body-content a {
         font-size: 16px;
         text-align: center;
@@ -515,6 +523,10 @@ form textarea {
     }
 
     .accordion-item-body-content ul li {
+        font-size: 18px;
+    }
+
+    .accordion-item-body-content ol li {
         font-size: 18px;
     }
 
