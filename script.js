@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
 // show an alert when the contact form button is clicked
 
 function showMessage() {
-    alert(`This is not a functional SMPT request. It is for educational purposes only.`);
+    alert(`This is not a functional SMTP request. It is for educational purposes only.`);
 }
 
 // accordion box click event listeners
